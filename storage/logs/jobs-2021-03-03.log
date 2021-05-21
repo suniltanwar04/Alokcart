@@ -1,0 +1,1241 @@
+[2021-03-03 10:05:27] production.INFO: ............. Job Processing:: App\Listeners\User\SendVerificationEmail .................  
+[2021-03-03 10:05:27] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\User\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:40:"App\\Listeners\\User\\SendVerificationEmail";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:33:"Illuminate\\Auth\\Events\\Registered":1:{s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:66;s:9:"relations";a:1:{i:0;s:4:"owns";}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 10:05:27] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 10:05:27] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:66;s:9:"relations";a:1:{i:0;s:4:"owns";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:66;s:9:"relations";a:1:{i:0;s:4:"owns";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"8dfb8419-e087-4aaf-aadc-5a0b6386e130";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 10:05:27] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 10:05:27] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 10:05:27] production.INFO: ............. Job Processing:: App\Listeners\Shop\NotifyMerchantShopCreated .................  
+[2021-03-03 10:05:27] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\Shop\\NotifyMerchantShopCreated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:44:"App\\Listeners\\Shop\\NotifyMerchantShopCreated";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:27:"App\\Events\\Shop\\ShopCreated":1:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:63;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 10:05:27] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopCreated .................  
+[2021-03-03 10:05:27] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopCreated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:66;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:34:"App\\Notifications\\Shop\\ShopCreated":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:63;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"f5f9364c-28d3-4f56-b71c-3d95065ac175";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 10:05:27] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 10:05:27] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopCreated .................  
+[2021-03-03 10:05:27] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopCreated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:66;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:34:"App\\Notifications\\Shop\\ShopCreated":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:63;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"f5f9364c-28d3-4f56-b71c-3d95065ac175";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:8:"database";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 10:05:27] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 10:05:27] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 10:05:27] production.INFO: ............. Job Processing:: App\Notifications\SuperAdmin\VerdorRegistered .................  
+[2021-03-03 10:05:27] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\SuperAdmin\\VerdorRegistered',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:1;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:45:"App\\Notifications\\SuperAdmin\\VerdorRegistered":10:{s:5:"tries";i:5;s:8:"merchant";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:66;s:9:"relations";a:1:{i:0;s:4:"owns";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"523f9e2a-364f-4af7-ae2e-b87932a39cb5";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 10:05:27] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 10:08:26] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 10:08:26] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:66;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:66;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"376b2a46-5a8c-4440-8b9d-89e394fc74d9";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 10:08:26] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 10:08:40] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 10:08:40] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:66;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:66;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"bc3f6adf-5719-4ba2-8925-0b816d41ff78";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 10:08:40] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 10:08:44] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 10:08:44] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:66;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:66;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"50372402-40e8-4f80-82ad-27579525d7c1";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 10:08:44] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 10:37:11] production.INFO: ............. Job Processing:: App\Listeners\Shop\NotifyMerchantShopIsLive .................  
+[2021-03-03 10:37:11] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\Shop\\NotifyMerchantShopIsLive',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:43:"App\\Listeners\\Shop\\NotifyMerchantShopIsLive";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:26:"App\\Events\\Shop\\ShopIsLive":1:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:63;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 10:37:11] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopIsLive .................  
+[2021-03-03 10:37:11] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopIsLive',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:66;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:33:"App\\Notifications\\Shop\\ShopIsLive":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:63;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"aa163c4f-39d1-4e9a-95eb-274b024d2efe";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 10:37:11] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 10:37:11] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopIsLive .................  
+[2021-03-03 10:37:11] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopIsLive',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:66;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:33:"App\\Notifications\\Shop\\ShopIsLive":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:63;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"aa163c4f-39d1-4e9a-95eb-274b024d2efe";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:8:"database";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 10:37:11] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 10:37:11] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 10:54:38] production.INFO: ............. Job Processing:: App\Listeners\Customer\SendWelcomeEmail .................  
+[2021-03-03 10:54:38] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\Customer\\SendWelcomeEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:39:"App\\Listeners\\Customer\\SendWelcomeEmail";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:30:"App\\Events\\Customer\\Registered":1:{s:8:"customer";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:12:"App\\Customer";s:2:"id";i:16;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 10:54:38] production.INFO: ............. Job Processing:: App\Notifications\Customer\Registered .................  
+[2021-03-03 10:54:38] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Customer\\Registered',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:12:"App\\Customer";s:2:"id";i:16;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:37:"App\\Notifications\\Customer\\Registered":9:{s:8:"customer";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:12:"App\\Customer";s:2:"id";i:16;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"3a9e6301-dc67-4e58-b402-fd362a2f6c2d";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 10:54:38] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 10:54:38] production.INFO: ............. Job Processing:: App\Notifications\Customer\Registered .................  
+[2021-03-03 10:54:38] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Customer\\Registered',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:12:"App\\Customer";s:2:"id";i:16;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:37:"App\\Notifications\\Customer\\Registered":9:{s:8:"customer";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:12:"App\\Customer";s:2:"id";i:16;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"3a9e6301-dc67-4e58-b402-fd362a2f6c2d";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:8:"database";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 10:54:38] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 10:54:38] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 10:54:38] production.INFO: ............. Job Processing:: App\Listeners\Customer\RegisterNewsletter .................  
+[2021-03-03 10:54:38] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\Customer\\RegisterNewsletter',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:41:"App\\Listeners\\Customer\\RegisterNewsletter";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:30:"App\\Events\\Customer\\Registered":1:{s:8:"customer";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:12:"App\\Customer";s:2:"id";i:16;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 10:54:38] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:38:21] production.INFO: ............. Job Processing:: App\Listeners\Customer\SendWelcomeEmail .................  
+[2021-03-03 11:38:21] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\Customer\\SendWelcomeEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:39:"App\\Listeners\\Customer\\SendWelcomeEmail";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:30:"App\\Events\\Customer\\Registered":1:{s:8:"customer";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:12:"App\\Customer";s:2:"id";i:17;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 11:38:21] production.INFO: ............. Job Processing:: App\Notifications\Customer\Registered .................  
+[2021-03-03 11:38:21] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Customer\\Registered',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:12:"App\\Customer";s:2:"id";i:17;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:37:"App\\Notifications\\Customer\\Registered":9:{s:8:"customer";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:12:"App\\Customer";s:2:"id";i:17;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"ce3add84-be05-4b25-a0f5-690c1b37a40c";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:38:21] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:38:21] production.INFO: ............. Job Processing:: App\Notifications\Customer\Registered .................  
+[2021-03-03 11:38:21] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Customer\\Registered',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:12:"App\\Customer";s:2:"id";i:17;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:37:"App\\Notifications\\Customer\\Registered":9:{s:8:"customer";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:12:"App\\Customer";s:2:"id";i:17;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"ce3add84-be05-4b25-a0f5-690c1b37a40c";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:8:"database";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:38:21] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:38:21] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:38:21] production.INFO: ............. Job Processing:: App\Listeners\Customer\RegisterNewsletter .................  
+[2021-03-03 11:38:21] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\Customer\\RegisterNewsletter',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:41:"App\\Listeners\\Customer\\RegisterNewsletter";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:30:"App\\Events\\Customer\\Registered":1:{s:8:"customer";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:12:"App\\Customer";s:2:"id";i:17;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 11:38:21] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:49:27] production.INFO: ............. Job Processing:: App\Listeners\User\SendVerificationEmail .................  
+[2021-03-03 11:49:27] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\User\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:40:"App\\Listeners\\User\\SendVerificationEmail";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:33:"Illuminate\\Auth\\Events\\Registered":1:{s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"owns";}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 11:49:27] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:49:27] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"owns";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"owns";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"480df6df-b1a6-4187-94e7-5be4e533f225";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:49:27] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:49:27] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:49:27] production.INFO: ............. Job Processing:: App\Listeners\Shop\NotifyMerchantShopCreated .................  
+[2021-03-03 11:49:27] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\Shop\\NotifyMerchantShopCreated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:44:"App\\Listeners\\Shop\\NotifyMerchantShopCreated";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:27:"App\\Events\\Shop\\ShopCreated":1:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:64;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 11:49:27] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopCreated .................  
+[2021-03-03 11:49:27] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopCreated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:34:"App\\Notifications\\Shop\\ShopCreated":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:64;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"d8662f64-c66c-4721-9282-ca1f842ce25d";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:49:27] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:49:27] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopCreated .................  
+[2021-03-03 11:49:27] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopCreated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:34:"App\\Notifications\\Shop\\ShopCreated":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:64;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"d8662f64-c66c-4721-9282-ca1f842ce25d";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:8:"database";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:49:27] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:49:27] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:49:27] production.INFO: ............. Job Processing:: App\Notifications\SuperAdmin\VerdorRegistered .................  
+[2021-03-03 11:49:27] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\SuperAdmin\\VerdorRegistered',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:1;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:45:"App\\Notifications\\SuperAdmin\\VerdorRegistered":10:{s:5:"tries";i:5;s:8:"merchant";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"owns";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"e9452008-219a-490c-8cba-4c7af8442d5b";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:49:27] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:51:26] production.INFO: ............. Job Processing:: App\Listeners\Shop\NotifyMerchantShopUpdated .................  
+[2021-03-03 11:51:26] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\Shop\\NotifyMerchantShopUpdated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:44:"App\\Listeners\\Shop\\NotifyMerchantShopUpdated";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:27:"App\\Events\\Shop\\ShopUpdated":1:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:64;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 11:51:26] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopUpdated .................  
+[2021-03-03 11:51:26] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopUpdated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:34:"App\\Notifications\\Shop\\ShopUpdated":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:64;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"c0311cb1-b9c7-4575-865f-87453f786a61";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:51:26] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:51:26] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopUpdated .................  
+[2021-03-03 11:51:26] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopUpdated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:34:"App\\Notifications\\Shop\\ShopUpdated":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:64;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"c0311cb1-b9c7-4575-865f-87453f786a61";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:8:"database";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:51:26] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:51:26] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:51:28] production.INFO: ............. Job Processing:: App\Listeners\Shop\NotifyMerchantShopUpdated .................  
+[2021-03-03 11:51:28] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\Shop\\NotifyMerchantShopUpdated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:44:"App\\Listeners\\Shop\\NotifyMerchantShopUpdated";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:27:"App\\Events\\Shop\\ShopUpdated":1:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:64;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 11:51:28] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopUpdated .................  
+[2021-03-03 11:51:28] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopUpdated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:34:"App\\Notifications\\Shop\\ShopUpdated":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:64;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"749b0e0b-711a-4aa2-80a5-f4e2a7cc83dd";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:51:28] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:51:28] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopUpdated .................  
+[2021-03-03 11:51:28] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopUpdated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:34:"App\\Notifications\\Shop\\ShopUpdated":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:64;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"749b0e0b-711a-4aa2-80a5-f4e2a7cc83dd";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:8:"database";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:51:28] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:51:28] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:51:28] production.INFO: ............. Job Processing:: App\Listeners\Shop\NotifyMerchantShopUpdated .................  
+[2021-03-03 11:51:28] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\Shop\\NotifyMerchantShopUpdated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:44:"App\\Listeners\\Shop\\NotifyMerchantShopUpdated";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:27:"App\\Events\\Shop\\ShopUpdated":1:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:64;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 11:51:28] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopUpdated .................  
+[2021-03-03 11:51:28] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopUpdated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:34:"App\\Notifications\\Shop\\ShopUpdated":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:64;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"d9db3574-a879-494b-aad2-f03445aa1083";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:51:28] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:51:28] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopUpdated .................  
+[2021-03-03 11:51:28] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopUpdated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:34:"App\\Notifications\\Shop\\ShopUpdated":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:64;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"d9db3574-a879-494b-aad2-f03445aa1083";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:8:"database";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:51:28] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:51:28] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:51:37] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:51:37] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"7bf9c826-b2c3-4ecd-b8f5-7ca48ac12e1c";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:51:38] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:51:38] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:51:38] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"befc9090-129e-4486-a826-58c7ce73e3ec";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:51:38] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:51:46] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:51:46] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"0174d0db-4109-4a16-baf0-0de6492486c9";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:51:46] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:51:46] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:51:46] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"c95d57dc-5527-4b8e-9256-3b4c807cd5ba";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:51:46] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:51:47] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:51:47] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"d4e9f36a-a365-42ca-8248-f6f0109cd764";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:51:47] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:55:24] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:55:24] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"c1836512-8af7-4720-8459-6a3a8489154c";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:55:24] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:55:25] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:55:25] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"552e3a9b-6def-4cec-ab01-4240b9969a89";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:55:25] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:55:26] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:55:26] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"c01e6c0c-4bf2-4c2f-a18b-4605ca5f54fa";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:55:26] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:55:26] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:55:26] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"21bf1b8a-bd9d-4ae5-a675-7a355cee45a3";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:55:26] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:55:28] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:55:28] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"f4ce72d7-390f-454c-92b2-9b06662d63e6";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:55:28] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:55:29] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:55:29] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"3049edee-0cfa-4fc3-bcbf-792d4a4f9453";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:55:29] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:55:30] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:55:30] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"95c36242-9fdd-436a-a1ab-c4d6a6a7ef2a";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:55:30] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:55:30] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:55:30] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"6dbf4275-aac7-44a6-b819-9eabcd36538e";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:55:30] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:55:30] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:55:30] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"2f9579b5-74bd-4806-b04f-3befab534bed";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:55:30] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:55:31] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:55:31] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"4986d979-5d23-4666-81ff-0af595009af0";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:55:31] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:55:32] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:55:32] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"9ff97358-fe47-4b65-a6ca-b3ac5184557c";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:55:32] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:55:33] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:55:33] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"76e3c77c-5a99-4b1e-8fa5-73aa03e46559";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:55:33] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:55:33] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:55:33] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"d404a9df-7c02-4a3c-bc54-972cc039a0ac";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:55:33] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:55:33] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:55:33] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"8d5d45a2-beb3-4e72-9cfa-c19233b6d9c6";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:55:33] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:56:01] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:56:01] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"a4487954-abd0-4ec7-a69e-de9ed162a1c0";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:56:01] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:56:22] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:56:22] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"cca6c488-03f0-45b3-8060-1df540487f77";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:56:22] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 11:56:23] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 11:56:23] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"61029da0-c400-4f08-99ed-7fcd88c60a2e";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 11:56:23] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 12:26:17] production.INFO: ............. Job Processing:: App\Listeners\Shop\NotifyMerchantShopIsLive .................  
+[2021-03-03 12:26:17] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\Shop\\NotifyMerchantShopIsLive',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:43:"App\\Listeners\\Shop\\NotifyMerchantShopIsLive";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:26:"App\\Events\\Shop\\ShopIsLive":1:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:64;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 12:26:17] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopIsLive .................  
+[2021-03-03 12:26:17] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopIsLive',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:33:"App\\Notifications\\Shop\\ShopIsLive":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:64;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"eb78bd1c-de0f-4521-bf3e-5dcd0c078c6a";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 12:26:17] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 12:26:17] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopIsLive .................  
+[2021-03-03 12:26:17] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopIsLive',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:67;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:33:"App\\Notifications\\Shop\\ShopIsLive":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:64;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"eb78bd1c-de0f-4521-bf3e-5dcd0c078c6a";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:8:"database";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 12:26:17] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 12:26:17] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 12:48:54] production.INFO: ............. Job Processing:: App\Listeners\User\SendVerificationEmail .................  
+[2021-03-03 12:48:54] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\User\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:40:"App\\Listeners\\User\\SendVerificationEmail";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:33:"Illuminate\\Auth\\Events\\Registered":1:{s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:68;s:9:"relations";a:1:{i:0;s:4:"owns";}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 12:48:54] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 12:48:54] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:68;s:9:"relations";a:1:{i:0;s:4:"owns";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:68;s:9:"relations";a:1:{i:0;s:4:"owns";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"5658e55c-2b4f-4cf3-b22b-f11585e39781";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 12:48:54] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 12:48:54] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 12:48:54] production.INFO: ............. Job Processing:: App\Listeners\Shop\NotifyMerchantShopCreated .................  
+[2021-03-03 12:48:54] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\Shop\\NotifyMerchantShopCreated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:44:"App\\Listeners\\Shop\\NotifyMerchantShopCreated";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:27:"App\\Events\\Shop\\ShopCreated":1:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:65;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 12:48:54] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopCreated .................  
+[2021-03-03 12:48:54] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopCreated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:68;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:34:"App\\Notifications\\Shop\\ShopCreated":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:65;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"17702132-32ae-401e-ab6f-14832ae34cd6";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 12:48:54] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 12:48:54] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopCreated .................  
+[2021-03-03 12:48:54] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopCreated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:68;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:34:"App\\Notifications\\Shop\\ShopCreated":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:65;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"17702132-32ae-401e-ab6f-14832ae34cd6";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:8:"database";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 12:48:54] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 12:48:54] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 12:48:54] production.INFO: ............. Job Processing:: App\Notifications\SuperAdmin\VerdorRegistered .................  
+[2021-03-03 12:48:54] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\SuperAdmin\\VerdorRegistered',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:1;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:45:"App\\Notifications\\SuperAdmin\\VerdorRegistered":10:{s:5:"tries";i:5;s:8:"merchant";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:68;s:9:"relations";a:1:{i:0;s:4:"owns";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"d20561cb-6e9d-4712-a212-f0c61b57ee4a";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 12:48:54] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 12:49:08] production.INFO: ............. Job Processing:: App\Notifications\Auth\SendVerificationEmail .................  
+[2021-03-03 12:49:08] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Auth\\SendVerificationEmail',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:68;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:12:"notification";O:44:"App\\Notifications\\Auth\\SendVerificationEmail":10:{s:5:"tries";i:5;s:4:"user";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:68;s:9:"relations";a:1:{i:0;s:4:"role";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"952d567f-0c98-417e-b9d0-30a9f2a10b86";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";i:5;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 12:49:08] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 12:51:36] production.INFO: ............. Job Processing:: App\Listeners\Shop\NotifyMerchantShopUpdated .................  
+[2021-03-03 12:51:36] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\Shop\\NotifyMerchantShopUpdated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:44:"App\\Listeners\\Shop\\NotifyMerchantShopUpdated";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:27:"App\\Events\\Shop\\ShopUpdated":1:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:65;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 12:51:36] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopUpdated .................  
+[2021-03-03 12:51:36] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopUpdated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:68;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:34:"App\\Notifications\\Shop\\ShopUpdated":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:65;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"9d5e55ce-f011-49e6-984a-8639c11c7660";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 12:51:36] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 12:51:36] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopUpdated .................  
+[2021-03-03 12:51:36] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopUpdated',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:68;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:34:"App\\Notifications\\Shop\\ShopUpdated":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:65;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"9d5e55ce-f011-49e6-984a-8639c11c7660";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:8:"database";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 12:51:36] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 12:51:36] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 13:00:41] production.INFO: ............. Job Processing:: App\Listeners\Shop\NotifyMerchantShopIsLive .................  
+[2021-03-03 13:00:41] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Listeners\\Shop\\NotifyMerchantShopIsLive',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => 5,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Events\\CallQueuedListener',
+      'command' => 'O:36:"Illuminate\\Events\\CallQueuedListener":7:{s:5:"class";s:43:"App\\Listeners\\Shop\\NotifyMerchantShopIsLive";s:6:"method";s:6:"handle";s:4:"data";a:1:{i:0;O:26:"App\\Events\\Shop\\ShopIsLive":1:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:65;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}}}s:5:"tries";i:5;s:9:"timeoutAt";N;s:7:"timeout";N;s:6:"' . "\0" . '*' . "\0" . 'job";N;}',
+    ),
+  ),
+)  
+[2021-03-03 13:00:41] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopIsLive .................  
+[2021-03-03 13:00:41] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopIsLive',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:68;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:33:"App\\Notifications\\Shop\\ShopIsLive":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:65;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"44d9c136-bdd4-4f4e-961d-098a41a7c839";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:4:"mail";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 13:00:41] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 13:00:41] production.INFO: ............. Job Processing:: App\Notifications\Shop\ShopIsLive .................  
+[2021-03-03 13:00:41] production.INFO: array (
+  'payload' => 
+  array (
+    'displayName' => 'App\\Notifications\\Shop\\ShopIsLive',
+    'job' => 'Illuminate\\Queue\\CallQueuedHandler@call',
+    'maxTries' => NULL,
+    'timeout' => NULL,
+    'timeoutAt' => NULL,
+    'data' => 
+    array (
+      'commandName' => 'Illuminate\\Notifications\\SendQueuedNotifications',
+      'command' => 'O:48:"Illuminate\\Notifications\\SendQueuedNotifications":11:{s:11:"notifiables";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\User";s:2:"id";i:68;s:9:"relations";a:0:{}s:10:"connection";s:5:"mysql";}s:12:"notification";O:33:"App\\Notifications\\Shop\\ShopIsLive":9:{s:4:"shop";O:45:"Illuminate\\Contracts\\Database\\ModelIdentifier":4:{s:5:"class";s:8:"App\\Shop";s:2:"id";i:65;s:9:"relations";a:1:{i:0;s:5:"owner";}s:10:"connection";s:5:"mysql";}s:2:"id";s:36:"44d9c136-bdd4-4f4e-961d-098a41a7c839";s:6:"locale";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}s:8:"channels";a:1:{i:0;s:8:"database";}s:5:"tries";N;s:7:"timeout";N;s:10:"connection";N;s:5:"queue";N;s:15:"chainConnection";N;s:10:"chainQueue";N;s:5:"delay";N;s:7:"chained";a:0:{}}',
+    ),
+  ),
+)  
+[2021-03-03 13:00:41] production.INFO: ......................... Job Processed Successfully .............................  
+[2021-03-03 13:00:41] production.INFO: ......................... Job Processed Successfully .............................  
