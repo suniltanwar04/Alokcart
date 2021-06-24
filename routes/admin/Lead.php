@@ -9,6 +9,7 @@
 Route::get('/','LeadGenerationController@index')->name('Lead_Generation');
 Route::get('/webLeads','LeadGenerationController@web_leads')->name('Lead_Generation');
 Route::get('/reportedLeads','LeadGenerationController@reported_leads')->name('Lead_Generation');
+Route::get('/buyLeads','LeadGenerationController@buy_leads')->name('Lead_Generation');
 Route::get('/open','LeadGenerationController@open')->name('Lead_Generation');
 Route::get('/active','LeadGenerationController@active')->name('Lead_Generation');
 Route::get('/closed','LeadGenerationController@closed')->name('Lead_Generation');

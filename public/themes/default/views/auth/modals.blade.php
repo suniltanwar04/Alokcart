@@ -70,6 +70,10 @@
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
+            <input name="mobile" class="form-control input-lg flat" placeholder="Phone Number" type="text" required/>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group">
             <input name="email" class="form-control input-lg flat" placeholder="{{ trans('theme.placeholder.your_email') }}" type="email" required/>
             <div class="help-block with-errors"></div>
           </div>

@@ -9,6 +9,7 @@ use App\Dashboard;
 use App\Common\Authorizable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SecretLoginRequest;
+use Session;
 
 class DashboardController extends Controller
 {
@@ -31,10 +32,13 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        if(session('return_to_buy_lead') == true) {
+           header('Location: '.session('return_to_buy_lead_url'));
+           exit(); 
+        }
         if(Auth::user()->isFromPlatform()) {
             return view('admin.dashboard.platform');
         }
-
         return view('admin.dashboard.merchant');
     }
 

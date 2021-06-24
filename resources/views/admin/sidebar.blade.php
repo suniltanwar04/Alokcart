@@ -129,6 +129,18 @@
                         <i class="fa fa-angle-double-right"></i> <span>Reported Leads</span>
                       </a>
                     </li>  
+            <li class=" {{ Request::is('admin/leads/buyLeads') ? 'active' : '' }}">
+                      <a href="{{ url('admin/leads/buyLeads') }}">
+                        <i class="fa fa-angle-double-right"></i> <span>Vendor buy Leads</span>
+                      </a>
+                    </li>  
+            @endif
+            @if(Auth::user()->role_id == 3)
+            <li class=" {{ Request::is('admin/leads/buyLeads') ? 'active' : '' }}">
+                      <a href="{{ url('admin/leads/buyLeads') }}">
+                        <i class="fa fa-angle-double-right"></i> <span>My Buy Leads</span>
+                      </a>
+                    </li>  
             @endif
                   </ul>
                 </li>

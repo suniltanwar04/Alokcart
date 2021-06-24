@@ -29,7 +29,7 @@
           <div class="col-md-6 nopadding-left">
             <div class="form-group">
               {!! Form::label('leadEmail', 'Email', ['class' => 'with-help']) !!}
-              {!! Form::email('leadEmail', null, ['class' => 'form-control', 'placeholder' => 'Email', 'required']) !!}
+              {!! Form::email('leadEmail', null, ['class' => 'form-control', 'placeholder' => 'Email']) !!}
               <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">

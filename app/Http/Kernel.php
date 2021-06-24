@@ -82,6 +82,7 @@ class Kernel extends HttpKernel
         'ajax' => \App\Http\Middleware\AllowOnlyAjaxRequests::class,
         'install' => \App\Http\Middleware\CanInstall::class,
         'checkout' => \App\Http\Middleware\CheckForGuestCheckoutMode::class,
+        'buylead' => \App\Http\Middleware\BuyleadTheme::class,
     ];
 
     /**

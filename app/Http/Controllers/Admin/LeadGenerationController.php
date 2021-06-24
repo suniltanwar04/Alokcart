@@ -55,7 +55,7 @@ class LeadGenerationController extends Controller
                     ->where('is_reported','!=','1')
                     ->where('leads.active',1)
                     ->where('lead_type','Internal')
-                    ->groupBy('leadProduct')
+                    // ->groupBy('leadProduct')
                     ->orderBy('leadId','desc')
                     ->get();
                 }else if(isset($fromDate) && isset($toDate)){
@@ -70,7 +70,7 @@ class LeadGenerationController extends Controller
                     ->where('is_reported','!=','1')
                     ->where('leads.active',1)
                     ->where('lead_type','Internal')
-                    ->groupBy('leadProduct')
+                    // ->groupBy('leadProduct')
                     ->orderBy('leadId','desc')
                     ->get();
                 }else{
@@ -79,7 +79,7 @@ class LeadGenerationController extends Controller
                     ->leftjoin('category_product','product_id','=','products.id')
                     ->select('leadId','leadCountry','leadName','leadEmail','leadContact','name as leadProduct','leadOwner','leadGeneratedFrom','leadProductQty','leadCountry','leadStatus','leads.updated_at')
                     ->whereIn('category_product.category_id',$availableCategoryForSeller)
-                    ->groupBy('leadProduct')
+                    // ->groupBy('leadProduct')
                     ->where('leadStatus','!=',3)
                     ->where('lead_type','Internal')
                     ->where('leads.active',1)
@@ -142,7 +142,7 @@ class LeadGenerationController extends Controller
                     ->where('leadStatus','!=',3)
                     ->where('lead_type','Web')
                     ->where('leads.active',1)
-                    ->groupBy('leadProduct')
+                    //->groupBy('leadProduct')
                     ->orderBy('leadId','desc')
                     ->get();
                 }else if(isset($fromDate) && isset($toDate)){
@@ -156,7 +156,7 @@ class LeadGenerationController extends Controller
                     ->where('leadStatus','!=',3)
                     ->where('leads.active',1)
                     ->where('lead_type','Web')
-                    ->groupBy('leadProduct')
+                    // ->groupBy('leadProduct')
                     ->orderBy('leadId','desc')
                     ->get();
                 }else{
@@ -165,7 +165,7 @@ class LeadGenerationController extends Controller
                     ->leftjoin('category_product','product_id','=','products.id')
                     ->select('leadId','leadCountry','leadName','leadEmail','leadContact','name as leadProduct','leadOwner','leadGeneratedFrom','leadProductQty','leadCountry','leadStatus','leads.updated_at')
                     ->whereIn('category_product.category_id',$availableCategoryForSeller)
-                    ->groupBy('leadProduct')
+                    // ->groupBy('leadProduct')
                     ->where('leads.active',1)
                     ->where('leadStatus','!=',3)
                     ->where('lead_type','Web')
@@ -189,6 +189,103 @@ class LeadGenerationController extends Controller
         $leadStatus= ['','Open','Active','Closed'];
         $sellerLeadStatus=['','Assigned','Contact','Matured'];
         return view('admin.leads.webLeads',compact('sellerLeadStatus','Leads','sellers','leadStatus','country','leadCountry','trashes'));
+    }
+
+    public function buy_leads(Request $request){
+        $shopId= Auth::user()->shop_id;
+        $userId= Auth::user()->id;
+        $role= Auth::user()->role_id;
+        $fromDate   =   $request->from;
+        $toDate     =   $request->to;
+        $leadCountry    =   $request->leadCountry;
+        $country    =  DB::table('leads')
+                        ->groupBy('leadCountry')
+                        ->select('leadCountry')
+                        ->where('leadCountry','!=','')
+                        ->get();
+        $trashes    =   [];
+        if($role==3){
+            /*
+                $categoriesForSeller=$productBySeller=DB::table('products')->where('shop_id','=',$shopId)
+                ->rightJoin('category_product','product_id','=','products.id')
+                ->rightJoin('categories','categories.id','=','category_product.category_id')
+                ->select('category_id')
+                ->groupBy('category_id')
+                ->get();
+                $availableCategoryForSeller=[];
+                foreach($categoriesForSeller as $categoryForSeller){
+                        $availableCategoryForSeller[]=$categoryForSeller->category_id;
+                }
+                // $availableCategoryForSeller= implode(',',$availableCategoryForSeller);
+                if(isset($leadCountry)){
+                    $Leads = DB::table('leads')
+                    ->leftjoin('products','products.id','=','leads.leadProduct')
+                    ->leftjoin('category_product','product_id','=','products.id')
+                    ->select('leadId','leadCountry','leadName','leadEmail','leadContact','name as leadProduct','leadOwner','leadGeneratedFrom','leadProductQty','leadCountry','leadStatus','leads.updated_at')
+                    ->whereIn('category_product.category_id',$availableCategoryForSeller)
+                    ->where('leadCountry','=',$leadCountry)
+                    ->where('leadStatus','!=',3)
+                    ->where('lead_type','Buy')
+                    ->where('leads.active',1)
+                    //->groupBy('leadProduct')
+                    ->orderBy('leadId','desc')
+                    ->get();
+                }else if(isset($fromDate) && isset($toDate)){
+                    $Leads = DB::table('leads')
+                    ->leftjoin('products','products.id','=','leads.leadProduct')
+                    ->leftjoin('category_product','product_id','=','products.id')
+                    ->select('leadId','leadCountry','leadName','leadEmail','leadContact','name as leadProduct','leadOwner','leadGeneratedFrom','leadProductQty','leadCountry','leadStatus','leads.updated_at')
+                    ->whereIn('category_product.category_id',$availableCategoryForSeller)
+                    ->where('leads.updated_at','>=',$fromDate)
+                    ->where('leads.updated_at','<=',$toDate)
+                    ->where('leadStatus','!=',3)
+                    ->where('leads.active',1)
+                    ->where('lead_type','Buy')
+                    //->groupBy('leadProduct')
+                    ->orderBy('leadId','desc')
+                    ->get();
+                }else{
+                    $Leads = DB::table('leads')
+                    ->leftjoin('products','products.id','=','leads.leadProduct')
+                    ->leftjoin('category_product','product_id','=','products.id')
+                    ->select('leadId','leadCountry','leadName','leadEmail','leadContact','name as leadProduct','leadOwner','leadGeneratedFrom','leadProductQty','leadCountry','leadStatus','leads.updated_at')
+                    ->whereIn('category_product.category_id',$availableCategoryForSeller)
+                    //->groupBy('leadProduct')
+                    ->where('leads.active',1)
+                    ->where('leadStatus','!=',3)
+                    ->where('lead_type','Buy')
+                    ->orderBy('leadId','desc')
+                    ->get();
+                }
+                $sellers = DB::table('shops')->get();
+            */
+                if(isset($leadCountry)){
+                    $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Buy')->where('merchant_id',$userId)->where('leadCountry','=',$leadCountry)->orderBy('leadId','desc')->get();
+                    $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Buy')->where('merchant_id',$userId)->where('leadCountry','=',$leadCountry)->orderBy('leadId','desc')->get();
+                } else if(isset($fromDate) && isset($toDate)){
+                    $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Buy')->where('merchant_id',$userId)->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
+                    $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Buy')->where('merchant_id',$userId)->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
+                } else {
+                    $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Buy')->where('merchant_id',$userId)->orderBy('leadId','desc')->get();
+                    $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Buy')->where('merchant_id',$userId)->orderBy('leadId','desc')->get();
+                }
+                $sellers = DB::table('shops')->get();    
+        }else{
+            if(isset($leadCountry)){
+                $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Buy')->where('leadCountry','=',$leadCountry)->orderBy('leadId','desc')->get();
+                $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Buy')->where('leadCountry','=',$leadCountry)->orderBy('leadId','desc')->get();
+            } else if(isset($fromDate) && isset($toDate)){
+                $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Buy')->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
+                $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Buy')->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
+            } else {
+                $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Buy')->orderBy('leadId','desc')->get();
+                $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Buy')->orderBy('leadId','desc')->get();
+            }
+            $sellers = DB::table('shops')->get();    
+        }
+        $leadStatus= ['','Open','Active','Closed'];
+        $sellerLeadStatus=['','Assigned','Contact','Matured'];
+        return view('admin.leads.buyLeads',compact('sellerLeadStatus','Leads','sellers','leadStatus','country','leadCountry','trashes'));
     }
 
     public function reported_leads(Request $request){

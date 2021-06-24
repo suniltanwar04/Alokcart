@@ -82,7 +82,7 @@
         <div class="">
 
             {{  Form::open(['method'=>'post']) }}
-            <h4 class="text-center">ENQUIRE <span class="highlightText">NOW</span> </h4>
+            <h4 class="text-center">Post Your <span class="highlightText">Requirement</span> </h4>
             <div class="form-group">
                 <label>Requirements*</label>
                 <input type="text" name="leadProduct" id="leadProduct" required class="form-control leadGenerationForm" placeholder="Enter Product/Service Name...">

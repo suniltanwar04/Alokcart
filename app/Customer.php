@@ -98,6 +98,7 @@ class Customer extends Authenticatable
                 'name',
                 'nice_name',
                 'email',
+                'phone',
                 'password',
                 'dob',
                 'sex',

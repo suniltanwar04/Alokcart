@@ -45,6 +45,12 @@ Route::group(['middleware' => ['storefront'], 'namespace' => 'Storefront'], func
 Route::group(['middleware' => ['selling'], 'namespace' => 'Selling'], function(){
 	Route::get('selling', 'SellingController@index')->name('selling');
 });
+Route::group(['middleware' => ['buylead'], 'namespace' => 'Buylead'], function(){
+	Route::get('buy-leads', 'BuyleadsController@index')->name('buylead');
+	Route::get('buy-leads/{leadId}/quickView', 'BuyleadsController@quickViewItem')->name('quickView.product');
+	Route::post('add_to_buy_leads', 'BuyleadsController@addToBuyLeads')->name('addtobuyleads')->middleware('ajax');
+});
+
 
 // // Route for customers
 // Route::group(['as' => 'customer.', 'prefix' => 'customer'], function() {

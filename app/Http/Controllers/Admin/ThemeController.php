@@ -44,6 +44,8 @@ class ThemeController extends Controller
             $system->selling_theme = $theme;
         else if($type == 'storefront')
             $system->active_theme = $theme;
+        else if($type == 'storefront')
+            $system->buyleads_theme = $theme;
 
         $system->save();
 
@@ -116,6 +118,39 @@ class ThemeController extends Controller
                 // we will overide this setting if exists
                 $data['assets-path'] = selling_theme_assets_path($data['slug']);
                 $data['views-path'] = selling_theme_views_path($data['slug']);
+
+                $sellingThemes[] = $data;
+            }
+        }
+
+        return $sellingThemes;
+    }
+
+    private function buyleadsThemes()
+    {
+        $sellingThemes = [];
+        foreach (glob(buyleads_theme_path('*'), GLOB_ONLYDIR) as $themeFolder) {
+            $themeFolder = realpath($themeFolder);
+            if (file_exists($jsonFilename = $themeFolder . '/' . 'theme.json')) {
+
+                $folders = explode(DIRECTORY_SEPARATOR, $themeFolder);
+                $themeName = end($folders);
+
+                // If theme.json is not an empty file parse json values
+                $json = file_get_contents($jsonFilename);
+                if ($json !== "") {
+                    $data = json_decode($json, true);
+                    if ($data === null) {
+                        throw new \Exception("Invalid theme.json file at [$themeFolder]");
+                    }
+                } else {
+                    $data = [];
+                }
+
+                // We already know views-path since we have scaned folders.
+                // we will overide this setting if exists
+                $data['assets-path'] = buyleads_theme_assets_path($data['slug']);
+                $data['views-path'] = buyleads_theme_views_path($data['slug']);
 
                 $sellingThemes[] = $data;
             }

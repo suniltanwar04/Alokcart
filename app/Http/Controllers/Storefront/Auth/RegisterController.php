@@ -93,10 +93,10 @@ class RegisterController extends Controller
         }
 
         $this->validator($request->all())->validate();
-
         $data = [
             'name' => $request->input('name'),
             'email' => $request->input('email'),
+            'phone' => $request->input('mobile'),
             'password' => bcrypt($request->input('password')),
             'verification_token' => Str::random(40)
         ];

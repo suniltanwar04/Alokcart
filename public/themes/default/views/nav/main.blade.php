@@ -147,6 +147,9 @@
         <li class="dropdown">
           <a class="navbar-item-mergin-top" href="{{ url('/selling') }}">{{ trans('theme.nav.sell_on', ['platform' => get_platform_title()]) }}</a>
         </li>
+        <li class="dropdown">
+          <a class="navbar-item-mergin-top" href="{{ url('/buy-leads') }}">Buy Leads</a>
+        </li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
