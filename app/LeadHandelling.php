@@ -29,7 +29,7 @@ class LeadHandelling extends Model
                  'leadContact', 'leadName',
                  'leadProduct','leadGeneratedFrom',
                 'leadProductQty','leadStatus',
-                'leadOwner'
+                'leadOwner','merchant_id'
                 ];
 
     

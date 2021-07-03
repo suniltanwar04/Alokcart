@@ -33,6 +33,7 @@ class LeadGenerationController extends Controller
                         ->get();
         $trashes    =   [];
         if($role==3){
+                /*
                 $categoriesForSeller=$productBySeller=DB::table('products')->where('shop_id','=',$shopId)
                 ->rightJoin('category_product','product_id','=','products.id')
                 ->rightJoin('categories','categories.id','=','category_product.category_id')
@@ -86,6 +87,17 @@ class LeadGenerationController extends Controller
                     ->where('is_reported','!=','1')
                     ->orderBy('leadId','desc')
                     ->get();
+                }
+                */
+                if(isset($leadCountry)){
+                    $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Buy')->where('merchant_id',$userId)->where('leadCountry','=',$leadCountry)->orderBy('leadId','desc')->get();
+                    $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Buy')->where('merchant_id',$userId)->where('leadCountry','=',$leadCountry)->orderBy('leadId','desc')->get();
+                } else if(isset($fromDate) && isset($toDate)){
+                    $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Buy')->where('merchant_id',$userId)->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
+                    $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Buy')->where('merchant_id',$userId)->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
+                } else {
+                    $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Buy')->where('merchant_id',$userId)->orderBy('leadId','desc')->get();
+                    $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Buy')->where('merchant_id',$userId)->orderBy('leadId','desc')->get();
                 }
                 $sellers = DB::table('shops')->get();
         }else{
@@ -175,14 +187,14 @@ class LeadGenerationController extends Controller
                 $sellers = DB::table('shops')->get();
         }else{
             if(isset($leadCountry)){
-                $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Web')->where('leadCountry','=',$leadCountry)->orderBy('leadId','desc')->get();
-                $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Web')->where('leadCountry','=',$leadCountry)->orderBy('leadId','desc')->get();
+                $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Web')->where('leadCountry','=',$leadCountry)->whereNull('merchant_id')->orderBy('leadId','desc')->get();
+                $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->whereNull('merchant_id')->where('lead_type','Web')->where('leadCountry','=',$leadCountry)->orderBy('leadId','desc')->get();
             } else if(isset($fromDate) && isset($toDate)){
-                $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Web')->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
-                $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Web')->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
+                $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->whereNull('merchant_id')->where('lead_type','Web')->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
+                $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Web')->whereNull('merchant_id')->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
             } else {
-                $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Web')->orderBy('leadId','desc')->get();
-                $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Web')->orderBy('leadId','desc')->get();
+                $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Web')->whereNull('merchant_id')->orderBy('leadId','desc')->get();
+                $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Web')->whereNull('merchant_id')->orderBy('leadId','desc')->get();
             }
             $sellers = DB::table('shops')->get();    
         }
@@ -205,81 +217,27 @@ class LeadGenerationController extends Controller
                         ->get();
         $trashes    =   [];
         if($role==3){
-            /*
-                $categoriesForSeller=$productBySeller=DB::table('products')->where('shop_id','=',$shopId)
-                ->rightJoin('category_product','product_id','=','products.id')
-                ->rightJoin('categories','categories.id','=','category_product.category_id')
-                ->select('category_id')
-                ->groupBy('category_id')
-                ->get();
-                $availableCategoryForSeller=[];
-                foreach($categoriesForSeller as $categoryForSeller){
-                        $availableCategoryForSeller[]=$categoryForSeller->category_id;
-                }
-                // $availableCategoryForSeller= implode(',',$availableCategoryForSeller);
                 if(isset($leadCountry)){
-                    $Leads = DB::table('leads')
-                    ->leftjoin('products','products.id','=','leads.leadProduct')
-                    ->leftjoin('category_product','product_id','=','products.id')
-                    ->select('leadId','leadCountry','leadName','leadEmail','leadContact','name as leadProduct','leadOwner','leadGeneratedFrom','leadProductQty','leadCountry','leadStatus','leads.updated_at')
-                    ->whereIn('category_product.category_id',$availableCategoryForSeller)
-                    ->where('leadCountry','=',$leadCountry)
-                    ->where('leadStatus','!=',3)
-                    ->where('lead_type','Buy')
-                    ->where('leads.active',1)
-                    //->groupBy('leadProduct')
-                    ->orderBy('leadId','desc')
-                    ->get();
-                }else if(isset($fromDate) && isset($toDate)){
-                    $Leads = DB::table('leads')
-                    ->leftjoin('products','products.id','=','leads.leadProduct')
-                    ->leftjoin('category_product','product_id','=','products.id')
-                    ->select('leadId','leadCountry','leadName','leadEmail','leadContact','name as leadProduct','leadOwner','leadGeneratedFrom','leadProductQty','leadCountry','leadStatus','leads.updated_at')
-                    ->whereIn('category_product.category_id',$availableCategoryForSeller)
-                    ->where('leads.updated_at','>=',$fromDate)
-                    ->where('leads.updated_at','<=',$toDate)
-                    ->where('leadStatus','!=',3)
-                    ->where('leads.active',1)
-                    ->where('lead_type','Buy')
-                    //->groupBy('leadProduct')
-                    ->orderBy('leadId','desc')
-                    ->get();
-                }else{
-                    $Leads = DB::table('leads')
-                    ->leftjoin('products','products.id','=','leads.leadProduct')
-                    ->leftjoin('category_product','product_id','=','products.id')
-                    ->select('leadId','leadCountry','leadName','leadEmail','leadContact','name as leadProduct','leadOwner','leadGeneratedFrom','leadProductQty','leadCountry','leadStatus','leads.updated_at')
-                    ->whereIn('category_product.category_id',$availableCategoryForSeller)
-                    //->groupBy('leadProduct')
-                    ->where('leads.active',1)
-                    ->where('leadStatus','!=',3)
-                    ->where('lead_type','Buy')
-                    ->orderBy('leadId','desc')
-                    ->get();
-                }
-                $sellers = DB::table('shops')->get();
-            */
-                if(isset($leadCountry)){
-                    $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Buy')->where('merchant_id',$userId)->where('leadCountry','=',$leadCountry)->orderBy('leadId','desc')->get();
-                    $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Buy')->where('merchant_id',$userId)->where('leadCountry','=',$leadCountry)->orderBy('leadId','desc')->get();
+                    $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Web')->where('merchant_id',$userId)->where('leadCountry','=',$leadCountry)->orderBy('leadId','desc')->get();
+                    $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Web')->where('merchant_id',$userId)->where('leadCountry','=',$leadCountry)->orderBy('leadId','desc')->get();
                 } else if(isset($fromDate) && isset($toDate)){
-                    $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Buy')->where('merchant_id',$userId)->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
-                    $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Buy')->where('merchant_id',$userId)->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
+                    $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Web')->where('merchant_id',$userId)->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
+                    $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Web')->where('merchant_id',$userId)->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
                 } else {
-                    $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Buy')->where('merchant_id',$userId)->orderBy('leadId','desc')->get();
-                    $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Buy')->where('merchant_id',$userId)->orderBy('leadId','desc')->get();
+                    $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Web')->where('merchant_id',$userId)->orderBy('leadId','desc')->get();
+                    $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Web')->where('merchant_id',$userId)->orderBy('leadId','desc')->get();
                 }
                 $sellers = DB::table('shops')->get();    
         }else{
             if(isset($leadCountry)){
-                $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Buy')->where('leadCountry','=',$leadCountry)->orderBy('leadId','desc')->get();
-                $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Buy')->where('leadCountry','=',$leadCountry)->orderBy('leadId','desc')->get();
+                $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Web')->where('leadCountry','=',$leadCountry)->whereNotNull('merchant_id')->orderBy('leadId','desc')->get();
+                $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->whereNotNull('merchant_id')->where('lead_type','Web')->where('leadCountry','=',$leadCountry)->orderBy('leadId','desc')->get();
             } else if(isset($fromDate) && isset($toDate)){
-                $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Buy')->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
-                $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Buy')->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
+                $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->whereNotNull('merchant_id')->where('lead_type','Web')->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
+                $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Web')->whereNotNull('merchant_id')->where('leads.updated_at','>=',$fromDate)->where('leads.updated_at','<=',$toDate)->orderBy('leadId','desc')->get();
             } else {
-                $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Buy')->orderBy('leadId','desc')->get();
-                $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Buy')->orderBy('leadId','desc')->get();
+                $Leads = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',1)->where('lead_type','Web')->whereNotNull('merchant_id')->orderBy('leadId','desc')->get();
+                $trashes = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->select('leads.*','products.name as leadProduct')->where('leads.active',0)->where('lead_type','Web')->whereNotNull('merchant_id')->orderBy('leadId','desc')->get();
             }
             $sellers = DB::table('shops')->get();    
         }

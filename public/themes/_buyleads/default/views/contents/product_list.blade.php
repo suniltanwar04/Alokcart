@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="product-info">
-                    <a href="{{ route('show.product', $item['slug']) }}" class="product-info-title" data-name="product_name">{{ $item['leadProduct'] }}</a>
+                    <a href="{{ route('quickView.product', $item['leadId']) }}" class="product-info-title" data-name="product_name">{{ $item['leadProductTitle'] }}</a>
                     <div class="product-info-price-new"> {{ $item['leadProductDescription'] }} </div>
                     <div class="product-info-price-new"> {{ $item['leadCountry'] }} </div>
                     <div class="product-info-price-new"> {{ date('d-m-Y',strtotime($item['created_at'])) }} </div>

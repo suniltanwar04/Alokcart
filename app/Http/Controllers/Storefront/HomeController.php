@@ -186,6 +186,7 @@ class HomeController extends Controller
         if($lead_check) {
             return redirect()->intended(url()->previous())->with('error', 'Enquiry already Exist.');
         }
+        $merchant_id = DB::table('products')->join('shops','shops.id','=','products.shop_id')->where('products.id','=',$request->product_id)->pluck('shops.owner_id');
         $lead = new LeadHandelling;
         $lead->leadEmail=$request->email;
         $lead->leadName=$request->name;
@@ -197,6 +198,7 @@ class HomeController extends Controller
         $lead->leadGeneratedFrom=$request->leadGeneratedFrom;
         $lead->leadCountry=$request->country;
         $lead->leadComment=$request->comment;
+        $lead->merchant_id=$merchant_id[0];
         $lead->save();
         return redirect()->intended(url()->previous())->with('success', 'Enquiry Submitted.');
     }

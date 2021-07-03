@@ -32,8 +32,11 @@ class BuyleadsController extends Controller
         $term = $request->input('q');
 
         $products = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->where('leads.active',1)->where('lead_type','Internal')->where('is_reported','!=','1');
+
+        $products_cnt = DB::table('leads')->leftjoin('products','products.id','=','leads.leadProduct')->where('leads.active',1)->where('lead_type','Internal')->where('is_reported','!=','1');
         
-        $countries = $products->distinct()->orderBy('leads.leadCountry','asc')->pluck('leads.leadCountry')->toArray();
+        $countries = $products_cnt->distinct()->orderBy('leads.leadCountry','asc')->pluck('leads.leadCountry')->toArray();
+        
         $products = $products->orderBy('leadId','desc');
 
         $p_ids = $products->distinct()->pluck('products.id')->toArray();
@@ -71,12 +74,12 @@ class BuyleadsController extends Controller
         if($request->has('sort_by') && !empty($request->input('sort_by'))) {
             $end_date = date('Y-m-d H:i:s');
             $start_date = date('Y-m-d H:i:s',strtotime($end_date . ' -'.$request->input('sort_by').' day'));
-            $products = $products->whereBetween('leads.created_at', [date('Y-m-d H:i:s'),date('Y-m-d :00:00')]);
+            $products = $products->whereBetween('leads.created_at', [$start_date,$end_date]);
         } else {
             if($request->has('days')) {
                 $end_date = date('Y-m-d H:i:s');
                 $start_date = date('Y-m-d H:i:s',strtotime($end_date . ' -'.$request->input('days').' day'));
-                $products = $products->whereBetween('leads.created_at', [date('Y-m-d H:i:s'),date('Y-m-d :00:00')]);
+                $products = $products->whereBetween('leads.created_at', [$start_date,$end_date]);
             }
         }
         if( $request->has('q')) {
